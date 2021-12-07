@@ -1,0 +1,5 @@
+/* pages/wxml/index.wxss */
+.small-p {
+    padding: 15rpx;
+    background-attachment: fixed;
+}
