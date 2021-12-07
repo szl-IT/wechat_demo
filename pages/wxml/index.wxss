@@ -3,3 +3,4 @@
     padding: 15rpx;
     background-attachment: fixed;
 }
+@import 'index-wxa-auto-dark.wxss'
