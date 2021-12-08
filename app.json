@@ -45,6 +45,7 @@
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json",
+    "darkmode": true,
     "networkTimeout": {
         "request": 20000,
         "connectSocket": 20000,

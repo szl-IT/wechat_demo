@@ -15,6 +15,5 @@ App({
   },
   globalData: {
     userInfo: null,
-    baseUrl:"https://www.wanandroid.com/"
   }
 })

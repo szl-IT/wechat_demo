@@ -1,2 +1,58 @@
 /* pages/home/home.wxss */
-@import 'home-wxa-auto-dark.wxss'
+.recycler_view{
+    background-color: white;
+}
+.recycler_item{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.recycler_content {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.text_top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+    font-size: 15px;
+    color: orangered;
+    border-radius: 5px;
+    border-color: orangered;
+    border-width: 1px;
+    border-style: solid;
+}
+.top_top{
+    flex-grow: 1
+}
+.top_new{
+    flex-grow: 1;
+}
+.top_user{
+    flex-grow: 1;
+    border: gold;
+    color: gray;
+    font-size: 15px;
+    margin: 0px;
+}
+
+.top_time{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    flex-grow: 7;
+    color: gray;
+    font-size: 15px;
+}
+
+@import 'home-wxa-auto-dark.wxss';

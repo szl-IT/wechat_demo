@@ -1,11 +1,27 @@
 <!--pages/home/home.wxml-->
 <view>
-    <swiper class="" autoplay="true" indicator-dots="true" circular="true" indicator-color="#8a8a8a" indicator-active-color="#d81e06">
+    <swiper wx:if="{{bannerData.length>0}}" autoplay="true" indicator-dots="true" circular="true" indicator-color="#8a8a8a" indicator-active-color="#d81e06" style="background-color: chocolate;">
         <block wx:for="{{bannerData}}">
-            <swiper-item display="block" data-url="{{item.url}}" bindtap="{{goCommonWeb(item.url)}}">
-                <image src="{{item.imagePath}}" style="width:100%;height: 170px;" />
+            <swiper-item display="block">
+                <image src="{{item.imagePath}}" data-url="{{item.url}}" bindtap="goCommonWeb" mode="aspectFill" style="width:100%;height: 170px;" />
             </swiper-item>
         </block>
     </swiper>
-    <button bindtap="goCommonWeb" data-url="{{'www.baidu.com'}}">click me</button>
+
+    <recycle-view class="recycler_view" batch="{{batchSetRecycleData}}" id="recycleId">
+        <recycle-item class="recycler_item" wx:for="{{recycleList}}" wx:key="id">
+            <view class="recycler_content">
+                <text class="text_top top_top">置顶</text>
+                <text class="text_top top_new">新</text>
+                <text class="text_top top_user">{{item.author}}</text>
+                <text class="top_time">{{item.niceDate}}</text>
+            </view>
+            <text style="margin-left: 5px; color: black;">{{item.title}}</text>
+            <view class="recycler_content" style="display: flex; flex-direction: row;justify-content: space-between;align-items: center;">
+                <text style="color: grey; margin-left: 5px;margin-top: 15px;margin-bottom: 10px;">{{item.chapterName+'/'+item.superChapterName}}</text>
+                <image src="/images/collect.png" style="width: 20px; height: 20px;margin-right: 5px;"></image>
+            </view>
+            <view style="height: 1px; background-color: gray; opacity: 0.2;"></view>
+        </recycle-item>
+    </recycle-view>
 </view>

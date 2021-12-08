@@ -1,2 +1,2 @@
 <!--pages/common_web/common_web.wxml-->
-<text>pages/common_web/common_web.wxml</text>
+<web-view src="{{url}}" bindload="onPullDownRefresh"></web-view>
