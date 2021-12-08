@@ -18,7 +18,7 @@
             </view>
             <text style="margin-left: 5px; color: black;">{{item.title}}</text>
             <view class="recycler_content" style="display: flex; flex-direction: row;justify-content: space-between;align-items: center;">
-                <text style="color: grey; margin-left: 5px;margin-top: 15px;margin-bottom: 10px;">{{item.chapterName+'/'+item.superChapterName}}</text>
+                <text style="color: grey; margin-left: 5px;margin-top: 15px;margin-bottom: 10px;">{{item.superChapterName+'/'+item.chapterName}}</text>
                 <image src="/images/collect.png" style="width: 20px; height: 20px;margin-right: 5px;"></image>
             </view>
             <view style="height: 1px; background-color: gray; opacity: 0.2;"></view>
